@@ -1,33 +1,84 @@
-# React + TypeScript + Vite
+Candidate Search Application
+----------------------------
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description
+-----------
 
-Currently, two official plugins are available:
+This project is a Candidate Search Application built using React, TypeScript, and Vite. The application integrates with the GitHub API to allow employers to search for and manage potential candidates for hiring. The app provides an intuitive interface to display candidate information, save potential candidates, and persist data for future use. This professional-grade solution emphasizes efficient API usage, local storage, and modern web development practices.
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+User Story
+----------
+AS AN employerI WANT a candidate search applicationSO THAT I can hire the best candidates
 
-## Expanding the ESLint configuration
+Acceptance Criteria
+-------------------
+GIVEN a candidate search application, WHEN the candidate search page loadsTHEN the information for one candidate should be displayed, including:
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Name
 
-* Configure the top-level `parserOptions` property as follows:
+Username
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Location
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+Avatar
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Email
+
+GitHub Profile URL (html_url)
+
+Company
+
+WHEN I click the "+" button, THEN the candidate should be saved to the list of potential candidates, and the next candidate's information should be displayed
+
+WHEN I click the "-" button, THEN the next candidate's information should be displayed without saving the current candidate
+
+WHEN there are no candidates available to review, THEN an appropriate message should be shown indicating no more candidates are available
+
+WHEN the potential candidates page loads, THEN the user should see a list of previously saved potential candidates, displaying the same fields as above
+
+WHEN the page reloads, THEN the list of potential candidates should persist and be available for viewing
+
+WHEN there are no potential candidates, THEN an appropriate message should be displayed indicating no candidates have been accepted
+
+Getting Started
+
+Prerequisites
+
+GitHub Personal Access Token:
+
+Create a fine-grained personal access token following GitHub's documentation.
+
+Leave all default permissions enabled. No additional privileges are required since this token will only access public profiles.
+
+Add the token to a .env file in the environment folder as VITE_GITHUB_TOKEN. Use the provided .env.EXAMPLE file as a reference.
+
+Important: Copy the token immediately after generating it, as it cannot be retrieved later. If lost, you must create a new token.
+
+Starter Code:
+
+Development
+-----------
+The starter code provides:
+
+The application folder structure and scaffolding.
+
+Code to retrieve data from the GitHub API located in ./Develop/src/api/API.tsx.
+
+Tasks
+
+Complete the CandidateSearch and SavedCandidates pages.
+
+Create any additional components as needed.
+
+Implement the following functionalities:
+
+Fetch candidate data from the GitHub API.
+
+Display candidate details as per the acceptance criteria.
+
+Handle saving and skipping candidates.
+
+Use local storage to persist saved candidate data.
+
+Test the application thoroughly to ensure all functionalities work as expected.
+
