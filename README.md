@@ -40,21 +40,8 @@ WHEN the page reloads, THEN the list of potential candidates should persist and 
 
 WHEN there are no potential candidates, THEN an appropriate message should be displayed indicating no candidates have been accepted
 
-Getting Started
 
-Prerequisites
 
-GitHub Personal Access Token:
-
-Create a fine-grained personal access token following GitHub's documentation.
-
-Leave all default permissions enabled. No additional privileges are required since this token will only access public profiles.
-
-Add the token to a .env file in the environment folder as VITE_GITHUB_TOKEN. Use the provided .env.EXAMPLE file as a reference.
-
-Important: Copy the token immediately after generating it, as it cannot be retrieved later. If lost, you must create a new token.
-
-Starter Code:
 
 Development
 -----------
